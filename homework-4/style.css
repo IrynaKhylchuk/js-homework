@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(48, 48, 48);
+    color: rgb(224, 215, 195);
+}
+
+div {
+    width: 400px;
+    margin: 20px auto;
+    background-color: rgb(73, 73, 73);
+    border: 3px solid rgb(129, 129, 129);
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    color: rgb(226, 133, 72);
+    text-transform: uppercase;
+}
+
+h3 {
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+input {
+    padding: 10px;
+    background-color: rgb(191, 222, 233);
+    border-radius: 3px;
+    border: 0;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(48, 48, 48);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button {
+    margin: 20px 0;
+    padding: 8px 16px;
+    background-color: rgb(197, 228, 197);
+    color: rgb(48, 48, 48);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+}
+
+button:active {
+    background-color:orange;
+}
+
+p {
+    color: rgb(223, 162, 223);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+span {
+    margin: 10px 0;
+    display: block;
+}
+
+input:focus {
+    outline: none;
+}
+
+#adminRights, 
+#userRights,
+#guestRights {
+    display: none;
+    background-color: none;
+    border: none;
+}
+
+#guestRights ul,
+#adminRights ul, 
+#userRights ul {
+    text-align: left;
+}
