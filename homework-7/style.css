@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div {    
+    width: 400px;
+    padding: 20px 10px;
+    margin-bottom: 50px;
+    background-color: rgb(63, 63, 63);
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 15px;
+    box-shadow: 0 0 20px white;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(136, 136, 136);
+}
+
+h3 {
+    margin: 10px 0;
+    font-weight: 400;
+    color: rgb(199, 199, 199);
+}
+
+input {
+    width: 200px;
+    padding: 8px 16px;
+    background-color: rgb(223, 223, 223);
+    border-radius: 10px;
+    border: none;
+    color: rgb(36, 36, 36);
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    margin: 20px 0;
+    padding: 8px 16px;
+    background-color: rgb(151, 151, 151);
+    color: rgb(48, 48, 48);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+}
+
+button:active {
+    background-color:rgb(122, 122, 122);
+}
+
+p {
+    color: rgb(194, 194, 194);
+    font-size: 20px;
+    font-weight: 800;
+}
