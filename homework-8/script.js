@@ -9,7 +9,7 @@ console.log(arrayNumbers)
 arrayNumbers.sort((x, y) => x - y)
 console.log(arrayNumbers)
 
-let sum = arrayNumbers.reduce((total, amount) =>{
+let sum = arrayNumbers.reduce((total, amount) => {
     if (amount < 0) {
         return total + amount
     }
