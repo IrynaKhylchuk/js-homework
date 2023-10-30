@@ -67,4 +67,29 @@ arrayNumbers2.forEach((number) => {
     }
 })
 
-console.log(`Task 2: Product of even numbers = ${reduce}`)
+console.log(`Task 2: Product of even numbers = ${product}`)
+
+// Завдання 4:
+// Задано масив А, що містить 100 цілих чисел. Знайти суму елементів цього масиву.
+
+const arrayNumbers4 = []
+
+function numbers(randomArray) {
+
+    for (let i = 0; i <= 99; i++) {
+        let randomNumber = Math.floor(Math.random() * 201) - 100
+        randomArray.push(randomNumber)
+    }
+
+    return randomArray
+}
+
+const randomNumbersArray = numbers(arrayNumbers4)
+console.log(randomNumbersArray)
+
+sum = 0
+sum = randomNumbersArray.reduce((total, amount) => {
+    return total + amount
+})
+
+console.log(`Task 4: The sum of array elements: ${sum}`)
