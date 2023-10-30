@@ -68,3 +68,30 @@ arrayNumbers2.forEach((number) => {
 })
 
 console.log(`Task 2: Product of even numbers = ${reduce}`)
+
+//Завдання 5:
+// Задано масив В, що містить 50 цілих чисел. 
+// Знайти добуток елементів масиву, що є непарними числами.
+
+const arrayNumbers5 = []
+
+function randomNumbers(randomArray) {
+    for (let i = 0; i <= 49; i++) {
+        let randomNumber = Math.floor(Math.random() * 101) - 50
+        randomArray.push(randomNumber)
+    }
+
+    return randomArray
+}
+
+console.log(randomNumbers(arrayNumbers5))
+
+product = 1
+
+arrayNumbers5.forEach((number) => {
+    if (number % 2 !== 0){
+        product *= number
+    }
+})
+
+console.log(`Task 5: The product of array elements that are odd numbers: ${product}`)
