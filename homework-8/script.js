@@ -58,12 +58,12 @@ arrayNumbers2.forEach((number, index) => {
 
 console.log(`Task 2: Sum between min and max = ${sum}`)
 
-let reduce = 1
+product = 1
 
 arrayNumbers2.forEach((number) => {
     if (number % 2 === 0)
     {
-        reduce *= number
+        product *= number
     }
 })
 
