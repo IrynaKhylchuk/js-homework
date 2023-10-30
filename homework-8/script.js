@@ -90,7 +90,7 @@ console.log(`Task 3: The index of the max element is v2: ${arrayNumbers3.indexOf
 
 //3
 max = findMax(arrayNumbers3)
-console.log(`Task 3: The index of the max element is v3: ${arrayNumbers3.indexOf(max)}`);
+console.log(`Task 3: The index of the max element is v3: ${arrayNumbers3.indexOf(max)}`)
 
 function findMax(numbers) {
     let max = numbers[0]
@@ -114,4 +114,29 @@ while (index < indexOfFirstNegativeNumber) {
     sum += arrayNumbers3[index++]
 }
 
-console.log(`Task 3: The sum of the elements located to the first negative element: ${sum}`);
+console.log(`Task 3: The sum of the elements located to the first negative element: ${sum}`)
+
+// Завдання 4:
+// Задано масив А, що містить 100 цілих чисел. Знайти суму елементів цього масиву.
+
+const arrayNumbers4 = []
+
+function numbers(randomArray) {
+
+    for (let i = 0; i <= 99; i++) {
+        let randomNumber = Math.floor(Math.random() * 201) - 100
+        randomArray.push(randomNumber)
+    }
+
+    return randomArray
+}
+
+const randomNumbersArray = numbers(arrayNumbers4)
+console.log(randomNumbersArray)
+
+sum = 0
+sum = randomNumbersArray.reduce((total, amount) => {
+    return total + amount
+})
+
+console.log(`Task 4: The sum of array elements: ${sum}`)
