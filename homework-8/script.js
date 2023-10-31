@@ -87,7 +87,6 @@ function createRandomArray(array, length) {
 const randomNumbersArray = createRandomArray(arrayNumbers4, 100)
 console.log(randomNumbersArray)
 
-sum = 0
 sum = randomNumbersArray.reduce((total, amount) => {
     return total + amount
 })
