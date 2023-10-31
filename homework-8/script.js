@@ -75,16 +75,16 @@ console.log(`Task 2: Product of even numbers = ${reduce}`)
 
 const arrayNumbers5 = []
 
-function randomNumbers(randomArray) {
-    for (let i = 0; i <= 49; i++) {
+function createRandomNumbers(array, length) {
+    for (let i = 0; i < length; i++) {
         let randomNumber = Math.floor(Math.random() * 101) - 50
-        randomArray.push(randomNumber)
+        array.push(randomNumber)
     }
 
-    return randomArray
+    return array
 }
 
-console.log(randomNumbers(arrayNumbers5))
+console.log(createRandomNumbers(arrayNumbers5, 50))
 
 product = 1
 
