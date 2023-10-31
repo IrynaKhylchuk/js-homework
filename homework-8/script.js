@@ -166,3 +166,41 @@ arrayNumbers5.forEach((number) => {
 })
 
 console.log(`Task 5: The product of array elements that are odd numbers: ${product}`)
+
+// Завдання 6:
+// Задано масив С, що містить 50 цілих чисел. Знайти позицію (позиції) елементу, що має мінімальне значення.
+// Якщо таких елементів декілька, сформувати додатковий масив індексів.
+
+const arrayNumbers6 = []
+
+console.log(createRandomNumbers(arrayNumbers6, 50))
+
+function findMin(numbers) {
+    let min = numbers[0]
+
+    for (let i = 1; i < numbers.length; i++) {
+        const nextNumber = numbers[i]
+
+        if (min > nextNumber) {
+            min = nextNumber
+        }
+    }
+
+    return min
+}
+
+const min = findMin(arrayNumbers6)
+
+function findIndex(array) {
+    let result = []
+
+    for (let i = 0; i < array.length; i++) {
+        if (min === array[i]) {
+            result.push(i)
+        } 
+    }
+
+    return result
+}
+
+console.log(`Task 6: The index of the min element/elements: ${findIndex(arrayNumbers6)}`)
