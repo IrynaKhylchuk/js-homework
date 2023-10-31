@@ -173,7 +173,7 @@ console.log(`Task 5: The product of array elements that are odd numbers: ${produ
 
 const arrayNumbers6 = []
 
-console.log(randomNumbers(arrayNumbers6))
+console.log(createRandomNumbers(arrayNumbers6, 50))
 
 function findMin(numbers) {
     let min = numbers[0]
