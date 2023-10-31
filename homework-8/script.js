@@ -139,3 +139,30 @@ sum = randomNumbersArray.reduce((total, amount) => {
 })
 
 console.log(`Task 4: The sum of array elements: ${sum}`)
+
+//Завдання 5:
+// Задано масив В, що містить 50 цілих чисел. 
+// Знайти добуток елементів масиву, що є непарними числами.
+
+const arrayNumbers5 = []
+
+function createRandomNumbers(array, length) {
+    for (let i = 0; i < length; i++) {
+        let randomNumber = Math.floor(Math.random() * 101) - 50
+        array.push(randomNumber)
+    }
+
+    return array
+}
+
+console.log(createRandomNumbers(arrayNumbers5, 50))
+
+product = 1
+
+arrayNumbers5.forEach((number) => {
+    if (number % 2 !== 0){
+        product *= number
+    }
+})
+
+console.log(`Task 5: The product of array elements that are odd numbers: ${product}`)
