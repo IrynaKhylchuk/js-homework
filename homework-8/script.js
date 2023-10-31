@@ -74,17 +74,17 @@ console.log(`Task 2: Product of even numbers = ${product}`)
 
 const arrayNumbers4 = []
 
-function numbers(randomArray) {
+function createRandomArray(array, length) {
 
-    for (let i = 0; i <= 99; i++) {
+    for (let i = 0; i < length; i++) {
         let randomNumber = Math.floor(Math.random() * 201) - 100
-        randomArray.push(randomNumber)
+        array.push(randomNumber)
     }
 
-    return randomArray
+    return array
 }
 
-const randomNumbersArray = numbers(arrayNumbers4)
+const randomNumbersArray = createRandomArray(arrayNumbers4, 100)
 console.log(randomNumbersArray)
 
 sum = 0
