@@ -1,0 +1,52 @@
+body {
+    background-color: #303030;
+    color: #b5b5b5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    display: block;
+    margin: 0 auto 10px;
+    color: #303030;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+select {
+    padding: 5px;
+}
+
+select:focus {
+    outline: none;
+}
+
+div {
+    display: flex;
+}
+
+div button {
+    margin: 0 5px 10px;
+}
+
+table,
+td,
+th {
+   border: 1px solid #b5b5b5;
+}
