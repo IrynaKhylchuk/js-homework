@@ -109,7 +109,7 @@ function tableCreate() {
     tbl.appendChild(tblBody)
 }
 
-tableCreate(garage)
+tableCreate()
 
 // Add car
 

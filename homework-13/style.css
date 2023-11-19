@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    background-color: #2b2a2a;
+    color: #d4d4d4;
+}
+
+.icon-bar {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #424242;
+    overflow: auto;
+}
+
+.icon-bar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.icon-bar ul li {
+    float: left;
+    width: 20%;
+    padding: 12px 0;
+    text-align: center;
+    color: #d4d4d4;
+    font-size: 36px;
+    transition: all 0.3s ease;
+}
+
+.icon-bar ul li:hover {
+    background-color: #181717;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #8d0000;
+}
+
+div:not(.icon-bar) {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    width: 500px;
+}
+
+form label {
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+form input{
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    color: #424242;
+}
+
+form input:focus{
+    outline: none;
+}
+
+form button {
+    margin: 10px 0;
+    padding: 5px 20px;
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    color: #424242;
+}
+
+#divAddCar, 
+#divDeleteCar, 
+#divSearchCar, 
+#divUpdateCarRun{
+    display: none;
+}
+
+p {
+    color: #d4d4d4;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 25px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    padding: 10px;
+    text-transform: capitalize;
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+td {
+    padding: 5px 10px;
+    font-size: 25px;
+    font-family: 'Smooch Sans', sans-serif;
+    text-transform: capitalize;
+}
+
+tr:first-child {
+    background-color: #8d0000;
+}
+
+tr:not(:first-child) {
+    background-color: #424242;
+}
+
+tr:not(:first-child):hover {
+    background-color: #656464;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #d4d4d4;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+}
+
+td:last-child:hover {
+    color: #8d0000;
+}
+
+th {
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    left: 230px;
+    top: -35px;
+    font-size: 15px;
+    width: 120px;
+    background-color: rgb(156, 156, 156);
+    color: #252525;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(156, 156, 156) transparent transparent transparent;
+  }

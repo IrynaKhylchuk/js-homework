@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 13</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="icon-bar">
+      <ul>
+        <li class="active" onclick="toggleDiv('divAddCar')">
+          <i class="fa-solid fa-plus"></i>
+        </li>
+        <li onclick="toggleDiv('divDeleteCar')"><i class="fa fa-trash"></i></li>
+        <li onclick="toggleDiv('divSearchCar')">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </li>
+        <li onclick="toggleDiv('divUpdateCarRun')">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </li>
+        <li onclick="toggleDiv('divHelp')">
+          <i class="fa-solid fa-question"></i>
+        </li>
+      </ul>
+    </div>
+    <div id="divAddCar" class="divMenu">
+      <form id="formAddCar">
+        <label for="inputNameAddCar">Name:</label
+        ><input
+          type="text"
+          name="name"
+          id="inputNameAddCar"
+          placeholder="Enter the name..."
+        />
+        <label for="inputModelAddCar">Model:</label
+        ><input
+          type="text"
+          name="model"
+          id="inputModelAddCar"
+          placeholder="Enter the model..."
+        />
+        <label for="inputProductionYearAddCar">Production Year:</label
+        ><input
+          type="text"
+          name="productionYear"
+          id="inputProductionYearAddCar"
+          placeholder="Enter the year of production..."
+        />
+        <label for="inputPriceAddCar">Price:</label
+        ><input
+          type="text"
+          name="price"
+          id="inputPriceAddCar"
+          placeholder="Enter the price..."
+        />
+        <label for="inputRunAddCar">Run:</label
+        ><input
+          type="text"
+          name="run"
+          id="inputRunAddCar"
+          placeholder="Enter the run..."
+        />
+        <label for="inputInGarageAddCar">In Garage:</label
+        ><input
+          type="text"
+          name="inGarage"
+          id="inputInGarageAddCar"
+          placeholder="Enter car status..."
+        />
+        <button type="submit" id="btnAddCar">Add Car</button>
+      </form>
+    </div>
+    <div id="divDeleteCar" class="divMenu">
+      <form id="formDeleteCar">
+        <label for="inputNameDeleteCar">Name:</label
+        ><input
+          type="text"
+          name="name"
+          id="inputNameDeleteCar"
+          placeholder="Enter the name..."
+        />
+        <label for="inputModelDeleteCar">Model:</label
+        ><input
+          type="text"
+          name="model"
+          id="inputModelDeleteCar"
+          placeholder="Enter the model..."
+        />
+        <button type="submit" id="btnDeleteCar">Delete</button>
+      </form>
+    </div>
+    <div id="divSearchCar" class="divMenu">
+      <form id="formSearchCar">
+        <label for="inputNameSearchCar">Name:</label
+        ><input
+          type="text"
+          name="name"
+          id="inputNameSearchCar"
+          placeholder="Enter the name..."
+          onkeyup="searchCarByNameOrModel()"
+        />
+        <label for="inputModelSearchCar">Model:</label
+        ><input
+          type="text"
+          name="model"
+          id="inputModelSearchCar"
+          placeholder="Enter the model..."
+          onkeyup="searchCarByNameOrModel()"
+        />
+      </form>
+    </div>
+    <div id="divUpdateCarRun" class="divMenu">
+      <form id="formUpdateCarRun">
+        <label for="inputNameUpdateCarRun">Name:</label
+        ><input
+          type="text"
+          name="name"
+          id="inputNameUpdateCarRun"
+          placeholder="Enter the name..."
+        />
+        <label for="inputModelUpdateCarRun">Model:</label
+        ><input
+          type="text"
+          name="model"
+          id="inputModelUpdateCarRun"
+          placeholder="Enter the model..."
+        />
+        <label for="inputUpdateCarRun">Run:</label
+        ><input
+          type="text"
+          name="run"
+          id="inputUpdateCarRun"
+          placeholder="Enter the run..."
+        />
+        <button type="submit" id="btnUpdateCarRun">Update</button>
+      </form>
+    </div>
+    <div id="divHelp" class="divMenu">
+      <p>
+        If you want to add a car, use the
+        <i class="fa-solid fa-plus"></i> button.
+      </p>
+      <p>
+        If you want to delete a car, use the <i class="fa fa-trash"></i> button.
+      </p>
+      <p>
+        If you want to search a car, use the
+        <i class="fa-solid fa-magnifying-glass"></i> button.
+      </p>
+      <p>
+        If you want to change the run of a car, use the
+        <i class="fa-solid fa-pen-to-square"></i> button.
+      </p>
+      <p>
+        If you need help, use the <i class="fa-solid fa-question"></i> button.
+      </p>
+      <p>Click the "InGarage" status to change it.</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
