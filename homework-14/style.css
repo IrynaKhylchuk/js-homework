@@ -1,0 +1,176 @@
+body {
+    min-height: 100%;
+    margin: 0;
+    background: #91eae4;  
+    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+    font-family: Bad Script;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px 30px;
+    background-color: #86A8E7;
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 25px;
+    background-color: white;
+    font-size: 25px;
+    border: 3px solid grey;
+    color: grey;
+}
+
+input:focus, button:focus {
+    background-color: white;
+    color: #86A8E7;
+    outline: none;
+    border: 3px solid #86A8E7;
+}
+
+span {
+    margin-right: 10px;
+    text-align: center;
+    height: 50px;
+    opacity: 0;
+    transition: .3s ;
+}
+
+i {
+    cursor: pointer;
+}
+
+button {
+    padding: 7px 20px;
+    background-color: #86A8E7;
+    color: white;
+    border: 3px solid #86A8E7;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Bad Script;
+    transition-duration: .4s;
+    cursor: pointer;
+}
+
+.filter {
+    width: 32%;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid #86A8E7;
+}
+
+#todo {
+    max-width: 400px;
+    height: 98%;
+    margin: 0px auto;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+}
+
+#buttons {
+    margin-left: 22%;
+    bottom: 5px;
+    position: absolute;
+    text-align: center;
+}
+
+.todos li {
+    height: 50px;
+    background-color: #f7f7f7;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.todos li:nth-child(2n) {
+    background-color: #f7f7f7;
+}
+
+.todos li:hover span {
+    width: 50px;
+    margin-left: 5px;
+    opacity: 1;
+}
+
+.todos {
+    margin: 0;
+    padding: 0;
+    height: 67%;
+    list-style-type: none;
+}
+
+.display {
+    display: none;
+    transition: .3s linear;
+}
+
+.checked {
+    color: grey;
+    text-decoration: line-through;
+}
+
+.fa-pencil-alt {
+    float: right;
+    padding: 8px;
+}
+
+.fa-trash-alt {
+    color: #86A8E7;
+}
+
+/* Modal Box */
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#overlay-content ul {
+    list-style: none;
+}
+
+#overlay-content a {
+    color: #86A8E7;
+    font-size: 80px;
+    position: absolute;
+    top: -150px;
+    right: 30px;
+}
+
+#overlay-content {
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+
+.show {
+    animation: show 2s ease forwards;
+}
+
+@keyframes show {
+    0%{
+      transform: translateY(-100%);
+    }
+  
+    100% {
+      transform: translateY(0%);
+    }
+}
