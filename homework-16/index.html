@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clicker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="faicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <label for="duration">Game Duration (seconds):</label>
+        <input type="number" name="duration" id="duration" value="1" />
+        <div class="levelDiv">
+          <label for="level">Choose level:</label>
+          <select name="level" id="level">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+            <option value="Random">Random</option>
+          </select>
+        </div>
+        <span id="gameRecord"
+          ><i class="fa-solid fa-trophy"></i> Record:
+          <span id="highestScore"></span
+        ></span>
+      </div>
+
+      <div id="game-container">
+        <button id="startGameBtn">Start Game</button>
+      </div>
+
+      <div>
+        <span id="score">Score:</span>
+        <span id="timer">Time: 10</span>
+      </div>
+
+      <div id="gameScoresDiv">
+        <div id="gameScoresModal">
+          <ul id="gameScoresList"></ul>
+        </div>
+        <button id="gameScoresBtn">Game Scores</button>
+      </div>
+
+      <div id="gameResultsModal">
+        <div id="gameResultsContent">
+          <ul id="gameResultsList"></ul>
+          <button id="closeBtn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
