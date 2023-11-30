@@ -22,56 +22,60 @@
   <body>
     <div id="userProfileDiv">
       <div id="userProfileImgDiv">
-        <img src="../images/userPhoto.jpg" alt="" />
+        <img
+          src="../images/femaleUserPhoto.jpg"
+          alt="userImg"
+          id="imgClickAndChange"
+        />
         <button type="button" id="exitUserProfileBtn">Exit</button>
       </div>
 
       <div id="userProfileInfoDiv">
         <div class="userInfoGroup">
           <p>Name:</p>
-          <h3 id="userName"></h3>
+          <span id="userName"></span>
         </div>
         <div class="userInfoGroup">
           <p>Surname:</p>
-          <h3 id="userSurname"></h3>
+          <span id="userSurname"></span>
         </div>
         <div class="userInfoGroup">
           <p>Patronymic:</p>
-          <h3 id="userPatronymic"></h3>
+          <span id="userPatronymic"></span>
         </div>
         <div class="userInfoGroup">
           <p>Email:</p>
-          <h3 id="userEmail"></h3>
+          <span id="userEmail"></span>
         </div>
         <div class="divGroup">
           <div class="userInfoGroup">
             <p>Birthday:</p>
-            <h3 id="userBirthday"></h3>
+            <span id="userBirthday"></span>
           </div>
           <div class="userInfoGroup">
             <p>Sex:</p>
-            <h3 id="userSex"></h3>
+            <span id="userSex"></span>
           </div>
           <div class="userInfoGroup">
             <p>Status:</p>
-            <h3 id="userStatus"></h3>
+            <span id="userStatus"></span>
           </div>
           <div class="userInfoGroup">
             <p>Since:</p>
-            <h3 id="userSince"></h3>
+            <span id="userSince"></span>
           </div>
           <div class="userInfoGroup">
             <p>Position:</p>
-            <h3 id="userPosition"></h3>
+            <span id="userPosition"></span>
           </div>
           <div class="userInfoGroup">
             <p>Group:</p>
-            <h3 id="userGroup"></h3>
+            <span id="userGroup"></span>
           </div>
         </div>
         <div class="userInfoGroup">
           <p>Location:</p>
-          <h3 id="userLocation"></h3>
+          <span id="userLocation"></span>
         </div>
         <div class="btnGroup">
           <button type="button" id="changeUserProfileBtn">Change</button>
@@ -149,11 +153,7 @@
               </div>
               <div class="inputGroup">
                 <label for="changeUserLocation">Location:</label>
-                <input
-                  type="text"
-                  name="location"
-                  id="changeUserLocation"
-                />
+                <input type="text" name="location" id="changeUserLocation" />
               </div>
               <div class="inputGroup">
                 <label for="changeUserPassword">Password:</label>

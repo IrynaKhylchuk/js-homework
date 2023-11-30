@@ -58,6 +58,13 @@ refreshUserData()
 // Push Data
 
 function refreshUserData() {
+
+    for (const [key, value] of Object.entries(currentUser)) {
+        if (value === undefined || value === '') {
+            currentUser[key] = 'N/A'
+        }
+    }
+
     userName.innerHTML = currentUser.firstName
     userSurname.innerHTML = currentUser.lastName
     userPatronymic.innerHTML = currentUser.patronymic

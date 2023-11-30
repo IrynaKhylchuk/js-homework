@@ -33,13 +33,22 @@ returnBtnSignUpForm.addEventListener('click', () => showHideDivs(signDiv, signUp
 // Sign Up
 
 class User {
-    constructor(firstName, lastName, birthday, email, password, confirmPassword){
+    constructor(firstName, lastName, birthday, email, password, confirmPassword, 
+                patronymic, sex, status, since, position, group, location) {
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthday = birthday;
         this.email = email;
         this.password = password;
         this.confirmPassword = confirmPassword;
+        this.patronymic = patronymic;
+        this.sex = sex;
+        this.status = status;
+        this.since = since;
+        this.position = position;
+        this.group = group;
+        this.location = location;
     }
 
     registration() {
@@ -91,7 +100,14 @@ signUpForm.addEventListener('submit', (event) => {
             userData.birthday, 
             userData.email,
             userData.password,
-            userData.confirmPassword)
+            userData.confirmPassword,
+            'N/A',
+            'N/A',
+            'N/A',
+            'N/A',
+            'N/A',
+            'N/A',
+            'N/A')
 
         user.registration()
     }
