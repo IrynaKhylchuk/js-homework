@@ -10,18 +10,18 @@ function showHideDivs(showDiv, hideDiv) {
 }
 
 function getFormData(formId, submitterId) {
-    const form = document.getElementById(formId);
-    const submitter = document.getElementById(submitterId);
-    const formData = new FormData(form, submitter);
+    const form = document.getElementById(formId)
+    const submitter = document.getElementById(submitterId)
+    const formData = new FormData(form, submitter)
 
-    return Object.fromEntries(formData.entries());
+    return Object.fromEntries(formData.entries())
 }
 
 function setFormDataFromObj(obj) {
     Object.keys(obj).forEach(key => {
         let input = document.getElementsByName(key)
         if (input.length) {
-            input[0].value = obj[key];
+            input[0].value = obj[key]
         }
     })
 }
