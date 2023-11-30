@@ -95,6 +95,7 @@ all.addEventListener('click', () => {
 
 clear.addEventListener('click', () => {
     ul.innerHTML = ''
+    localStorage.clear()
 })
 
 // Modal Box
@@ -116,3 +117,20 @@ window.addEventListener('click', function(event) {
     modalBox.style.display = 'none'
   }
 })
+
+// Save
+
+save.addEventListener('click', () => {
+    const li = document.querySelectorAll('.todos li')
+    const todos = [...li].map(x => x.innerText)     
+    localStorage.setItem('item', JSON.stringify(todos))
+})
+
+window.addEventListener('load', function(){
+    const todosJson = this.localStorage.getItem('item')
+    const todos = JSON.parse(todosJson)
+    if (todos != null){
+        todos.map(t => addNewToDo(t))
+    }
+})
+
