@@ -1,0 +1,109 @@
+/* User Profile Div */
+
+#userProfileDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    padding: 60px 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+}
+
+#userProfileImgDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+#userProfileInfoDiv {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.divGroup {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divGroup div {
+    width: 150px;
+}
+
+h3, p {
+    margin: 0;
+}
+
+p {
+    text-transform: uppercase;
+}
+
+.userInfoGroup:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.btnGroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+#exitUserProfileBtn {
+    width: 100px;
+    margin: 0 auto;
+}
+
+/* Change Info Div */
+
+#changeUserProfileInfoDiv {
+    display: none;
+    width: 500px;
+    padding: 0 30px;
+}
+
+.flexForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flexForm button {
+    display: block;
+}
+
+.inputDivGroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-1, .col-2 {
+    width: 48%;
+}
+
+.col-3 {
+    width: 100%;
+}
+
+.col-1 {
+    margin-right: 20px;
+}
+
+.col-1 input,
+.col-2 input {
+    width: 200px;
+}
+
+.col-1 select,
+.col-2 select {
+    width: 235px;
+}
+

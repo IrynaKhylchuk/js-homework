@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9mm</title>
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/user_style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="userProfileDiv">
+      <div id="userProfileImgDiv">
+        <img src="../images/userPhoto.jpg" alt="" />
+        <button type="button" id="exitUserProfileBtn">Exit</button>
+      </div>
+
+      <div id="userProfileInfoDiv">
+        <div class="userInfoGroup">
+          <p>Name:</p>
+          <h3 id="userName"></h3>
+        </div>
+        <div class="userInfoGroup">
+          <p>Surname:</p>
+          <h3 id="userSurname"></h3>
+        </div>
+        <div class="userInfoGroup">
+          <p>Patronymic:</p>
+          <h3 id="userPatronymic"></h3>
+        </div>
+        <div class="userInfoGroup">
+          <p>Email:</p>
+          <h3 id="userEmail"></h3>
+        </div>
+        <div class="divGroup">
+          <div class="userInfoGroup">
+            <p>Birthday:</p>
+            <h3 id="userBirthday"></h3>
+          </div>
+          <div class="userInfoGroup">
+            <p>Sex:</p>
+            <h3 id="userSex"></h3>
+          </div>
+          <div class="userInfoGroup">
+            <p>Status:</p>
+            <h3 id="userStatus"></h3>
+          </div>
+          <div class="userInfoGroup">
+            <p>Since:</p>
+            <h3 id="userSince"></h3>
+          </div>
+          <div class="userInfoGroup">
+            <p>Position:</p>
+            <h3 id="userPosition"></h3>
+          </div>
+          <div class="userInfoGroup">
+            <p>Group:</p>
+            <h3 id="userGroup"></h3>
+          </div>
+        </div>
+        <div class="userInfoGroup">
+          <p>Location:</p>
+          <h3 id="userLocation"></h3>
+        </div>
+        <div class="btnGroup">
+          <button type="button" id="changeUserProfileBtn">Change</button>
+          <button type="submit" id="deleteUserProfileBtn">Delete Acount</button>
+        </div>
+      </div>
+
+      <div id="changeUserProfileInfoDiv">
+        <form class="flexForm" id="userForm">
+          <div class="col-1">
+            <div class="col-1">
+              <div class="inputGroup">
+                <label for="changeUserName">Name:</label>
+                <input type="text" name="firstName" id="changeUserName" />
+              </div>
+              <div class="inputGroup">
+                <label for="changeUserSurname">Surname:</label>
+                <input type="text" name="lastName" id="changeUserSurname" />
+              </div>
+              <div class="inputGroup">
+                <label for="changeUserPatronymic">Patronymic:</label>
+                <input
+                  type="text"
+                  name="patronymic"
+                  id="changeUserPatronymic"
+                />
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="inputGroup">
+                <label for="changeUserEmail">Email:</label>
+                <input type="email" name="email" id="changeUserEmail" />
+              </div>
+              <div class="inputGroup">
+                <label for="changeUserBirthday">Birthday:</label>
+                <input type="date" name="birthday" id="changeUserBirthday" />
+              </div>
+              <div class="inputGroup">
+                <label for="changeUserSex">Sex:</label>
+                <select name="sex" id="changeUserSex">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="col-1">
+              <div class="inputGroup">
+                <label for="changeUserStatus">Status:</label>
+                <select name="status" id="changeUserStatus">
+                  <option value="Studying">Studying</option>
+                  <option value="Working">Working</option>
+                  <option value="Unemployed">Unemployed</option>
+                </select>
+              </div>
+              <div class="inputGroup">
+                <label for="changeUserSince">Since:</label>
+                <input type="date" name="since" id="changeUserSince" />
+              </div>
+              <div class="inputGroup">
+                <label for="changeUserPosition">Position:</label>
+                <select name="position" id="changeUserPosition">
+                  <option value="Student">Student</option>
+                  <option value="Teacher">Teacher</option>
+                  <option value="Unemployed">Unemployed</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="inputGroup">
+                <label for="changeUserGroup">Group:</label>
+                <input type="text" name="group" id="changeUserGroup" />
+              </div>
+              <div class="inputGroup">
+                <label for="changeUserLocation">Location:</label>
+                <input
+                  type="text"
+                  name="location"
+                  id="changeUserLocation"
+                />
+              </div>
+              <div class="inputGroup">
+                <label for="changeUserPassword">Password:</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="changeUserPassword"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <button type="submit" id="saveBtn">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../js/util.js"></script>
+    <script src="../js/user_script.js"></script>
+  </body>
+</html>

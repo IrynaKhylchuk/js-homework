@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9mm</title>
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/index_style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="signDiv">
+      <button type="button" id="signInBtnStart">
+        <i class="fa-solid fa-user"></i>
+        <span id="signInSpan">Sign In</span>
+      </button>
+      <button type="button" id="signUpBtnStart">
+        <i class="fa-solid fa-user-plus"></i>
+        <span id="signUpSpan">Sign Up</span>
+      </button>
+    </div>
+
+    <div id="signInDiv">
+      <form id="signInForm">
+        <div class="inputGroup">
+          <label for="signInEmail">Email:</label>
+          <input type="email" name="signInEmail" id="signInEmail" />
+        </div>
+        <div class="inputGroup">
+          <label for="signInPassword">Password:</label>
+          <input type="password" name="signInPassword" id="signInPassword" />
+        </div>
+        <div class="btnSignIn">
+          <button type="button" id="returnBtnSignInForm">Return</button>
+          <button type="submit" id="signInBtn">Sign in</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="signUpDiv">
+      <form id="signUpForm">
+        <div class="inputGroup">
+          <label for="firstName">First Name:</label>
+          <input type="text" name="firstName" id="firstName" />
+        </div>
+        <div class="inputGroup">
+          <label for="lastName">Last Name:</label>
+          <input type="text" name="lastName" id="lastName" />
+        </div>
+        <div class="inputGroup">
+          <label for="birthday">Birthday:</label>
+          <input type="date" name="birthday" id="birthday" />
+        </div>
+        <div class="inputGroup">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="inputGroup">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div class="inputGroup">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" name="confirmPassword" id="confirmPassword" />
+        </div>
+        <div class="signUpBtnDiv">
+          <button type="button" id="returnBtnSignUpForm">Return</button>
+          <button type="submit" id="signUpBtn">Sign up</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="successRegist">
+      <h3>Congratulations!</h3>
+      <p>
+        You have successfully registered on the site. Do you want to sign in to
+        your account?
+      </p>
+      <button type="button" id="returnBtnSuccessRegist">
+        <i class="fa-solid fa-arrow-left"></i> Return
+      </button>
+      <button type="button" id="scsSignIn">Sign In</button>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/util.js"></script>
+  </body>
+</html>

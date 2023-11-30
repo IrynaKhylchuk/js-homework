@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+	height: 100vh;
+	background: linear-gradient(230deg, rgb(75, 207, 147), rgb(75, 121, 207), rgb(162, 75, 207)) 0% 0% / 300% 300%;
+	background-size: 400% 400%;
+	animation: gradient 60s ease infinite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Animation */
+
+#userProfileDiv,
+#signDiv, 
+#signInDiv, 
+#signUpDiv, 
+#successRegist{
+    animation: opacity 1s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity:0;
+    }
+
+    100% {
+        opacity:1;
+    }
+}
+
+/* Buttons */
+
+button {
+    padding: 8px 16px;
+    margin-top: 20px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+button:focus {
+    background-color: rgb(194, 194, 194);
+}
+
+/* Inputs */
+
+form {
+    width: 100%;
+}
+
+input, select {
+    display: block;
+    width: 86%;
+    margin: 10px 0;
+    padding: 8px 16px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    font-size: 20px;
+}
+
+input:focus, 
+select:focus {
+    outline: none;
+}
+
+label {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+}
