@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS OOP & Classes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <img src="img/backgroundImage.jpg" alt="backgroundImage" id="bg" />
+
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+    </div>
+
+    <h1>
+      Java Script <br />
+      OOP & Classes
+    </h1>
+
+    <button type="button" id="carAddBtn">+ add new car</button>
+
+    <div class="container"></div>
+
+    <div id="modalAddEditCar" class="modalAddEditCar">
+      <div class="modalContent">
+        <h2 id="modalHeader"></h2>
+        <form id="addEditCarForm">
+          <div class="inputs">
+            <input type="hidden" name="id" id="idInput" required />
+            <label for="brandInput">Brand:</label>
+            <input type="text" name="brand" id="brandInput" required />
+            <label for="modelInput">Model:</label>
+            <input type="text" name="model" id="modelInput" required />
+            <label for="manufactureYearInput">Manufacture Year:</label>
+            <input
+              type="number"
+              name="manufactureYear"
+              id="manufactureYearInput"
+              min="0"
+              max="2023"
+              oninput="validity.valid||(value='')"
+              required
+            />
+            <label for="runInput">Run:</label>
+            <input
+              type="number"
+              name="run"
+              id="runInput"
+              min="0"
+              oninput="validity.valid||(value='')"
+              required
+            />
+            <label for="pricePerDayInput">Price per day:</label>
+            <input
+              type="number"
+              name="pricePerDay"
+              id="pricePerDayInput"
+              min="0"
+              oninput="validity.valid||(value='')"
+              required
+            />
+            <label for="imagePathInput">Image url:</label>
+            <input type="text" name="imagePath" id="imagePathInput" />
+            <label for="isAvailableForRentInput">Is available for rent:</label>
+            <input
+              type="checkbox"
+              name="isAvailableForRent"
+              id="isAvailableForRentInput"
+            />
+          </div>
+          <div class="buttons">
+            <button type="button" id="modalBoxCloseBtn">Cancel</button>
+            <button type="submit" id="addCarBtn">Add</button>
+            <button type="submit" id="saveCarBtn">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="car.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
