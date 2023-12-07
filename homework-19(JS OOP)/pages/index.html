@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What about your profession?</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../imgs/faicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="signDiv">
+      <button type="button" id="signInBtnStart">
+        <i class="fa-solid fa-user"></i>
+        <span id="signInSpan">Sign In</span>
+      </button>
+      <button type="button" id="signUpBtnStart">
+        <i class="fa-solid fa-user-plus"></i>
+        <span id="signUpSpan">Sign Up</span>
+      </button>
+      <button type="button" id="btnAllUsers">
+        <i class="fa-solid fa-users"></i>
+        <span id="allUsersSpan">All Users</span>
+      </button>
+    </div>
+
+    <div id="signInDiv">
+      <form id="signInForm">
+        <div class="inputGroup">
+          <label for="signInEmail">Email:</label>
+          <input type="email" name="signInEmail" id="signInEmail" />
+        </div>
+        <div class="inputGroup">
+          <label for="signInPassword">Password:</label>
+          <input type="password" name="signInPassword" id="signInPassword" />
+        </div>
+        <div class="btnSignIn">
+          <button type="button" id="returnBtnSignInForm">Return</button>
+          <button type="submit" id="signInBtn">Sign in</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="signUpDiv">
+      <form id="signUpForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" />
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" />
+        <label for="birthday">Birthday:</label>
+        <input type="date" name="birthday" id="birthday" />
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" />
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" />
+        <label for="confirmPassword">Proffesion:</label>
+        <select name="profession" id="professionSelect">
+          <option>Please select profession</option>
+          <option value="0">Doctor</option>
+          <option value="1">Teacher</option>
+          <option value="2">Driver</option>
+          <option value="3">Salesperson</option>
+        </select>
+        <div id="professionContainer">
+          <div class="doctor">
+            <div class="inputGroup">
+              <label for="experience">Experience:</label>
+              <input type="text" name="experience" id="experience" />
+            </div>
+            <div class="inputGroup">
+              <label for="license">License:</label>
+              <input type="text" name="license" id="license" />
+            </div>
+            <div class="inputGroup">
+              <label for="specialization">Specialization:</label>
+              <input type="text" name="specialization" id="specialization" />
+            </div>
+          </div>
+          <div class="teacher">
+            <div class="inputGroup">
+              <label for="qualification">Qualification:</label>
+              <input type="text" name="qualification" id="qualification" />
+            </div>
+            <div class="inputGroup">
+              <label for="educationalSubject">Educational subject:</label>
+              <input
+                type="text"
+                name="educationalSubject"
+                id="educationalSubject"
+              />
+            </div>
+            <div class="inputGroup">
+              <label for="teachingExperience">Teaching experience:</label>
+              <input
+                type="text"
+                name="teachingExperience"
+                id="teachingExperience"
+              />
+            </div>
+          </div>
+          <div class="driver">
+            <div class="inputGroup">
+              <label for="driverLicense">Driver's license:</label>
+              <input type="text" name="driverLicense" id="driverLicense" />
+            </div>
+            <div class="inputGroup">
+              <label for="driverLicenseCategory"
+                >Driver's license category:</label
+              >
+              <input
+                type="text"
+                name="driverLicenseCategory"
+                id="driverLicenseCategory"
+              />
+            </div>
+            <div class="inputGroup">
+              <label for="car">Car:</label>
+              <input type="text" name="car" id="car" />
+            </div>
+          </div>
+          <div class="salesperson">
+            <div class="inputGroup">
+              <label for="shop">Shop:</label>
+              <input type="text" name="shop" id="shop" />
+            </div>
+            <div class="inputGroup">
+              <label for="typeOfProduct">Type of product:</label>
+              <input type="text" name="typeOfProduct" id="typeOfProduct" />
+            </div>
+            <div class="inputGroup">
+              <label for="medicalBook">Medical book:</label>
+              <input type="text" name="medicalBook" id="medicalBook" />
+            </div>
+          </div>
+        </div>
+        <div class="signUpBtnDiv">
+          <button type="button" id="returnBtnSignUpForm">Return</button>
+          <button type="submit" id="signUpBtn">Sign up</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="successRegist">
+      <h3>Congratulations!</h3>
+      <p>
+        You have successfully registered on the site. Do you want to sign in to
+        your account?
+      </p>
+      <div class="successRegistBtns">
+        <button type="button" id="returnBtnSuccessRegist">
+          <i class="fa-solid fa-arrow-left"></i> Return
+        </button>
+        <button type="button" id="scsSignIn">Sign In</button>
+      </div>
+    </div>
+
+    <script src="../script/util.js"></script>
+    <script src="../script/classes.js"></script>
+    <script src="../script/script.js"></script>
+  </body>
+</html>

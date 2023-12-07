@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What about your profession?</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/userProfileStyle.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../imgs/faicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="userProfileDiv">
+      <div id="userProfileImgDiv">
+        <img src="" alt="userImg" id="userProfileImg" />
+        <button type="button" id="exitUserProfileBtn">Exit</button>
+      </div>
+      <div class="userProfileInfoDiv">
+        <div class="userInfoGroup">
+          <p>Name:</p>
+          <span id="userName"></span>
+        </div>
+        <div class="userInfoGroup">
+          <p>Surname:</p>
+          <span id="userSurname"></span>
+        </div>
+        <div class="userInfoGroup">
+          <p>Email:</p>
+          <span id="userEmail"></span>
+        </div>
+        <div class="userInfoGroup">
+          <p>Birthday:</p>
+          <span id="userBirthday"></span>
+        </div>
+        <div class="userInfoGroup">
+          <p>Location:</p>
+          <span id="userLocation"></span>
+        </div>
+        <div class="userInfoGroup">
+          <p>Profession:</p>
+          <span id="userProfession"></span>
+        </div>
+        <div id="professionContainer">
+          <div class="doctor">
+            <div class="userInfoGroup">
+              <p>Experience:</p>
+              <span id="userExperience"></span>
+            </div>
+            <div class="userInfoGroup">
+              <p>License:</p>
+              <span id="userLicense"></span>
+            </div>
+            <div class="userInfoGroup">
+              <p>Specialization:</p>
+              <span id="userSpecialization"></span>
+            </div>
+          </div>
+          <div class="teacher">
+            <div class="userInfoGroup">
+              <p>Qualification:</p>
+              <span id="userQualification"></span>
+            </div>
+            <div class="userInfoGroup">
+              <p>Educational Subject:</p>
+              <span id="userEducationalSubject"></span>
+            </div>
+            <div class="userInfoGroup">
+              <p>Teaching Experience:</p>
+              <span id="userTeachingExperience"></span>
+            </div>
+          </div>
+          <div class="driver">
+            <div class="userInfoGroup">
+              <p>Driver License:</p>
+              <span id="userDriverLicense"></span>
+            </div>
+            <div class="userInfoGroup">
+              <p>Driver License Category:</p>
+              <span id="userDriverLicenseCategory"></span>
+            </div>
+            <div class="userInfoGroup">
+              <p>Car:</p>
+              <span id="userCar"></span>
+            </div>
+          </div>
+          <div class="salesperson">
+            <div class="userInfoGroup">
+              <p>Shop:</p>
+              <span id="userShop"></span>
+            </div>
+            <div class="userInfoGroup">
+              <p>Type of product:</p>
+              <span id="userTypeOfProduct"></span>
+            </div>
+            <div class="userInfoGroup">
+              <p>Medical book:</p>
+              <span id="userMedicalBook"></span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="deleteUserProfileBtn">Delete Acount</button>
+      </div>
+    </div>
+
+    <script src="../script/util.js"></script>
+    <script src="../script/classes.js"></script>
+    <script src="../script/userProfileScript.js"></script>
+  </body>
+</html>

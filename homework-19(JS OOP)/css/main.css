@@ -1,0 +1,86 @@
+body {
+    width: 100%;  
+    height: auto;  
+    animation: gradient 10s infinite alternate linear;
+    background: hsl(224, 38%, 41%);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradient {
+    100% {
+        background: hsl(338, 38%, 41%);
+    }
+}
+
+/* Animation */
+
+#userProfileDiv,
+#signDiv, 
+#signInDiv, 
+#signUpDiv, 
+#successRegist,
+#container {
+    animation: opacity 1s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Buttons */
+
+button {
+    padding: 8px 16px;
+    margin-top: 20px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+button:focus {
+    background-color: rgb(194, 194, 194);
+}
+
+/* Inputs */
+
+form {
+    width: 100%;
+}
+
+input, select {
+    display: block;
+    width: 86%;
+    margin: 10px auto;
+    padding: 8px 16px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    font-size: 20px;
+}
+
+select {
+    width: 98%;
+}
+
+input:focus, 
+select:focus {
+    outline: none;
+}
+
+label {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+}
