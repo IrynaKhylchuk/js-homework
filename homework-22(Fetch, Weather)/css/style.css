@@ -1,0 +1,205 @@
+body {
+  background-color: #263238;
+  color: white;
+}
+
+#formDiv,
+#infoDiv {
+  display: none;
+}
+
+.container-fluid {
+  width: 700px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#aboutDiv {
+  display: block;
+  background-color: #313e45;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+#aboutDiv h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+#aboutDiv .mainInfo {
+  padding: 20px 0;
+}
+
+#aboutDiv .theMarmot {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#aboutDiv #nextBtn {
+  background-color: #3f4e57;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+#formDiv {
+  background-color: #313e45;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+#formDiv label {
+  display: block;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+#formDiv input {
+  border-radius: 10px;
+  padding: 8px 16px;
+  border: none;
+}
+
+#formDiv input:focus {
+  outline: none;
+}
+
+#formDiv button {
+  background-color: #3f4e57;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+
+#infoDiv {
+  background-color: #313e45;
+  border-radius: 20px;
+  width: 650px;
+}
+
+#infoDiv .row div{
+  padding: 20px;
+}
+
+#infoDiv hr {
+  background-color: #263238;
+  height: 4px;
+  opacity: 1;
+  margin: 0;
+}
+
+#infoDiv #backBtnInfo {
+  background-color: #3f4e57;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+
+#infoDiv .col-6:last-child {
+  text-align: center;
+}
+
+.borderRight {
+  border-right: 4px solid #263238;
+  text-align: center;
+}
+
+.borderRight div p{
+  display: inline;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+#infoDiv table {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.centerTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#infoDiv table td{
+  padding: 0 20px;
+}
+
+#infoDiv table td:last-child{
+  font-weight: 500;
+}
+
+#infoDiv #temperature {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+}
+
+#infoDiv #temperature span {
+  font-size: 30px;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 12em;
+  height: 10em;
+  font-size: 1em;
+}
+
+.sun {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  margin: -1.25em;
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.375em #fff;
+  animation: spin 12s infinite linear;
+}
+
+.rays {
+  position: absolute;
+  top: -2em;
+  left: 50%;
+  display: block;
+  width: 0.375em;
+  height: 1.125em;
+  margin-left: -0.1875em;
+  background: #fff;
+  border-radius: 0.25em;
+  box-shadow: 0 5.375em #fff;
+}
+
+.rays:before,
+.rays:after {
+  content: "";
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  display: block;
+  width: 0.375em;
+  height: 1.125em;
+  transform: rotate(60deg);
+  transform-origin: 50% 3.25em;
+  background: #fff;
+  border-radius: 0.25em;
+  box-shadow: 0 5.375em #fff;
+}
+
+.rays:before {
+  transform: rotate(120deg);
+}
