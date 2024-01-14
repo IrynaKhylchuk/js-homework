@@ -1,0 +1,130 @@
+/* fonts */
+
+@font-face {
+    font-family: fontCozy;
+    src: url(../fonts/fontCozy.ttf);
+}
+
+@font-face {
+    font-family: Salsa-Regular;
+    src: url(../fonts/Salsa-Regular.ttf);
+}
+
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+#welcome,
+#welcomeGame2,
+#kitty,
+#kittyGame2,
+#thought,
+#goBtnGame2 {
+    animation: opacity 2s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#welcome,
+#welcomeGame2 {
+    background-color: rgba(148, 196, 148, 0.8);
+    border-radius: 30px;
+    width: auto;
+    height: auto;
+    padding: 30px 10px;
+    z-index: 1;
+    max-width: 370px;
+}
+
+#welcome h1,
+#welcomeGame2 h1 {
+    font-family: fontCozy;
+    font-size: 40px;
+    color: rgb(35 56 51);
+    font-weight: 100;
+    line-height: 50px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#welcome h1 span,
+#welcomeGame2 h1 span {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+#welcome p span,
+#welcomeGame2 p span {
+    font-size: 22px;
+    font-weight: 100;
+    font-family: fontCozy;
+    color: rgb(255, 255, 255);
+}
+
+#welcome p,
+#welcomeGame2 p {
+    font-family: Salsa-Regular;
+    font-weight: 600;
+    color: rgb(35 56 51);
+    margin: 0 20px;
+}
+
+#playBtn,
+#playBtnGame2 {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 16px;
+    border-radius: 12px;
+    border: 2px solid rgb(35 56 51);
+    font-family: fontCozy;
+    font-size: 20px;
+    color: rgb(35 56 51);
+    font-weight: 100;
+    background-color: rgb(213 221 205);
+    cursor: pointer;
+}
+
+#playBtn:hover,
+#playBtnGame2:hover {
+    border: 2px solid rgb(26, 41, 37);
+    background-color: rgb(189, 196, 182);
+    color: rgb(26, 41, 37);
+}
+
+#playBtn:active,
+#playBtnGame2:active {
+    border: 2px solid rgb(213 221 205);
+    background-color: rgb(35 56 51);
+    color: rgb(213 221 205);
+}
+
+#welcome > span,
+#welcomeGame2 > span {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    font-family: Salsa-Regular;
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+#kitty,
+#kittyGame2,
+#thought,
+#goBtnGame2 {
+    display: none;
+}
+
+#meowSpan {
+    opacity: 0;
+}

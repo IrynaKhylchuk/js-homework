@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitty Game Two</title>
+    <link rel="stylesheet" href="css/gameTwo.css" />
+    <link rel="stylesheet" href="css/util.css" />
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="backgroundImgs">
+      <div class="row">
+        <div id="home" class="col-6"></div>
+        <div id="outside" class="col-6"></div>
+      </div>
+      <div class="row">
+        <div id="school" class="col-6"></div>
+        <div id="subway" class="col-6"></div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div id="welcomeGame2">
+        <h1>Welcome to <span>Kitty traveler!</span></h1>
+        <p>
+          <span>Kitty traveler</span>
+          - is a game in which you can send a cat named Shishi to school,
+          subway, city or home. To do this, click on Shishi and drag it to the
+          desired location.
+        </p>
+        <span>Enjoy!</span>
+        <button type="button" id="playBtnGame2">Play</button>
+      </div>
+      <span id="meowSpan">Meow</span>
+      <div id="kittyGame2">
+        <img
+          src="imgs/kitty/sit/sitTrans.gif"
+          alt="kitty"
+          id="kittyImgGame2"
+          draggable="true"
+        />
+      </div>
+      <p id="thought"></p>
+      <button type="button" id="goBtnGame2"></button>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="js/gameTwo.js"></script>
+  </body>
+</html>
