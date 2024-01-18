@@ -1,0 +1,24 @@
+@font-face {
+    font-family: fontBold;
+    src: url(../fonts/NotoSans_Condensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: fontMedium;
+    src: url(../fonts/NotoSans_Condensed-Medium.ttf);
+}
+
+@font-face {
+    font-family: fontRegular;
+    src: url(../fonts/NotoSans_Condensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: fontLight;
+    src: url(../fonts/NotoSans_Condensed-Light.ttf);
+}
+
+@font-face {
+    font-family: fontThin;
+    src: url(../fonts/NotoSans_Condensed-Thin.ttf);
+}

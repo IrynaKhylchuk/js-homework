@@ -1,0 +1,55 @@
+.videosLine {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+
+.videosLine div {
+    width: 19%;
+    margin-right: 1%;
+}
+
+.videosLine div img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.videosLine div h5 {
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    white-space: nowrap;
+    width: 230px;
+    font-size: 16px;
+    margin: 10px 0 3px;
+    color: #0f0f0f;
+}
+
+.videosLine div h6 {
+    font-size: 12px;
+    color: #606060;
+    font-family: fontRegular;
+}
+
+#country {
+    margin: 20px 0;
+}
+
+.videoFullInfo div {
+    display: block;
+}
+
+@media screen and (max-width: 1199px) {
+    .videosLine div {
+        width: 32%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .videosLine div {
+        width: 49%;
+    }
+
+    .videosLine div img {
+        width: 100%
+    }
+}
