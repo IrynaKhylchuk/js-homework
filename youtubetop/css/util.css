@@ -1,0 +1,176 @@
+p, h4 {
+    font-family: fontRegular;
+}
+
+h1, h2 {
+    font-family: fontBold;
+}
+
+h3, h6, h5, span, #topVideoBtnHome {
+    font-family: fontMedium;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topLogo {
+    display: flex;
+    align-items: center;
+}
+
+.topLogo img {
+    height: 32px;
+    width: auto;
+}
+
+.topLogo h1 {
+    margin: 0 10px;
+    font-size: 22px;
+    opacity: .8;
+}
+
+.topLogo h1 a {
+    text-decoration: none;
+    color: black;
+    opacity: .8;
+}
+
+.topLogo h1 span {
+    font-size: 24px;
+}
+
+.topLogo h1 a:hover {
+    opacity: 1;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+}
+
+.account p {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.account a i {
+    color: black;
+    opacity: .8;
+    font-size: 25px;
+}
+
+.account a i:hover {
+    opacity: 1;
+}
+
+.topnav {
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: red;
+    padding: 0 16px;
+}
+
+.topnav a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 8px 8px;
+    margin:  0 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: fontMedium;
+}
+
+.topnav a.active {
+    border-bottom: 2px solid white;
+}
+
+.topnav a:hover {
+    color: white;
+    opacity: .8;
+    border-bottom: 2px solid white;
+}
+
+.main {
+    margin: 40px 0;
+    height: auto;
+    flex: 1;
+}
+
+.footerBlock {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLogo img {
+    height: 32px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.footerLogo > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.footerLogo > div h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.footerLogo > div span {
+    padding: 0;
+    font-size: 10px;
+}
+
+.socialMedia a i {
+    color: red;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.rights {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 10px;
+    padding: 10px 0;
+    background-color: red;
+    color: white;
+    height: 80px;
+}
+
+.rights p {
+    margin: 0;
+}

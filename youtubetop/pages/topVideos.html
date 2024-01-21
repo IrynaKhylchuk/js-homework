@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youtube Top</title>
+    <title>Top Videos</title>
     <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/util.css" />
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/topVideos.css" />
     <link rel="stylesheet" href="../css/fonts.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -42,48 +42,37 @@
         </div>
       </div>
       <div class="topnav">
-        <a href="index.html" class="active">home</a>
-        <a href="topVideos.html">top videos</a>
+        <a href="index.html">home</a>
+        <a href="topVideos.html" class="active">top videos</a>
         <a href="aboutUs.html">about us</a>
         <a href="contactUs.html">contact us</a>
       </div>
       <div class="container main">
-        <div class="row">
-          <div class="col-12 col-lg-7 infoDiv">
-            <h2>Youtube Analytics</h2>
-            <h3>
-              - is a website where you can find the Top 5 Most Popular Videos
-              from all over the world.
-            </h3>
-            <p>
-              <span class="youtubeSpan">YouTube</span> - is an American online
-              video sharing and social media platform owned by Google.
-              Accessible worldwide, it was launched on February 14, 2005, by
-              Steve Chen, Chad Hurley, and Jawed Karim, three former employees
-              of PayPal. Headquartered in San Bruno, California, United States,
-              it is the second most visited website in the world, after Google
-              Search. YouTube has more than 2.5 billion monthly users, who
-              collectively watch more than one billion hours of videos every
-              day. As of May 2019, videos were being uploaded to the platform at
-              a rate of more than 500 hours of content per minute.
-            </p>
-            <p>
-              Our site helps influencers who want to understand what content is
-              in demand around the world. To create videos that will be
-              interesting all over the world. To do this, you only need to press
-              one button, choose a country and we will show you the top 5 most
-              popular videos in the country you have chosen.
-            </p>
-            <p>
-              Click the button to see the Top 5 Most Popular Videos from all
-              over the world <i class="fa-solid fa-arrow-down"></i>
-            </p>
-            <button type="button" id="topVideoBtnHome">Top Videos</button>
-          </div>
-          <div class="col-5 diagramDiv">
-            <img src="../imgs/diagram.gif" alt="diagram" />
-          </div>
+        <h3>Top 5 Most Popular Videos</h3>
+        <p>
+          On this page you can see the top 5 most popular videos in any country
+          in the world.
+        </p>
+        <p>We provide information about:</p>
+        <ul>
+          <li>title</li>
+          <li>number of views, likes, comments</li>
+          <li>upload date</li>
+          <li>description</li>
+          <li>tags</li>
+        </ul>
+
+        <label for="country">Select a country:</label>
+        <select name="country" id="country"></select>
+
+        <div class="videosLine"></div>
+        <div id="undefinedCountry">
+          <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+          <p>YouTube is not available in your country.</p>
+          <p>We apologize for the inconvenience.</p>
         </div>
+
+        <div id="videoDivFullInfo"></div>
       </div>
       <div class="footer">
         <div class="footerBlock">
@@ -117,6 +106,7 @@
         </div>
       </div>
     </div>
-    <script src="../scripts/script.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="../scripts/topVideo.js" type="module"></script>
   </body>
 </html>

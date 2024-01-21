@@ -1,4 +1,4 @@
-//#region get top 5 most popular video
+//#region api
 
 function loadClient() {
     gapi.client.setApiKey('AIzaSyB1s0ywJ9cA4x13ZsEd3i-PIy18SOr8V8k')
@@ -34,17 +34,18 @@ function execute(countryCode) {
                     let viewsCount = videoData.statistics.viewCount
                     let likesCount = videoData.statistics.likeCount
                     let commentsCount = videoData.statistics.commentCount
-                    let videoTags = videoData.snippet.tags
                     let date = videoData.snippet.publishedAt
+                    let videoTags = videoData.snippet.tags
 
                     createVideosDiv(imgSrc, title, creator)
                     createVideoFullInfoDiv(videoSrc, title, videoDesc, creator, viewsCount, likesCount, commentsCount, date, videoTags)
                 }
 
-                console.log('Response', response.result.items[1].snippet.publishedAt)
+                console.log('Response', response)
             },
             function (err) {
                 console.error('Execute error', err)
+                showEmptyResult()
             }
         )
 }
@@ -53,17 +54,17 @@ gapi.load('client', function() {
     loadClient().then(execute)
 })
 
-let count = 0
+//#endregion
+
+//#region videos line
+
+const videosLine = document.querySelector('.videosLine')
 
 function createVideosDiv(imgSrc, title, creator) {
-    const videosLine = document.querySelector('.videosLine')
-
     const videoDiv = document.createElement('div')
     const videoImg = document.createElement('img')
     const videoTitle = document.createElement('h5')
     const videoCreator = document.createElement('h6')
-
-    videoDiv.setAttribute('id', `videoDivNum${count++}`)
 
     videoImg.src = imgSrc
     videoTitle.textContent = title
@@ -77,7 +78,7 @@ function createVideosDiv(imgSrc, title, creator) {
 
 //#endregion
 
-//#region get country name
+//#region get country
 
 async function getCountryNameAsync() {
     try{
@@ -94,19 +95,21 @@ async function getCountryNameAsync() {
 }
 
 const countryNameObj = await getCountryNameAsync()
+
 const countrySelect = document.getElementById('country')
+const undefinedCountry = document.getElementById('undefinedCountry')
+const videoDivFullInfo = document.getElementById('videoDivFullInfo')
 
 function getCountryName() {
-
     for (const country of countryNameObj) {
         let newCountry = document.createElement('option')
 
         newCountry.value = country.cca2
         newCountry.innerHTML = country.name.common
 
-        if (countrySelect.value === 'US') {
-            countrySelect.selected = 'selected'
-        } 
+        if (newCountry.value === 'US') {
+            newCountry.selected = 'selected'
+        }
         
         countrySelect.appendChild(newCountry)
     }
@@ -114,48 +117,62 @@ function getCountryName() {
 
 getCountryName()
 
-countrySelect.addEventListener('change', () => execute(countrySelect.value))
+function updateContent() {
+    videosLine.innerHTML = ''
+    videoDivFullInfo.innerHTML = ''
+
+    execute(countrySelect.value)
+}
+
+countrySelect.addEventListener('change', updateContent)
+countrySelect.addEventListener('keypress', updateContent)
+
+function showEmptyResult() {
+    undefinedCountry.style.display = 'block'
+    undefinedCountry.style.textAlign = 'center'
+}
 
 //#endregion
 
 //#region video full info
 
 function createVideoFullInfoDiv(videoUrl, title, videoDesc, creator, views, likes, comments, date, tags) {
-    const videoDivFullInfo = document.getElementById('videoDivFullInfo')
-
     const row = document.createElement('div')
-    row.classList.add('row')
-    row.style.margin = '50px 0'
-    row.style.maxHeight = '400px'
-    row.style.overflowY = 'scroll'
+    row.classList.add('row', 'videoInfoDiv')
 
     const columnOne = document.createElement('div')
     const columnTwo = document.createElement('div')
-    columnOne.classList.add('col-6')
+    columnOne.classList.add('col-6', 'videoContainer')
     columnTwo.classList.add('col-6')
 
     const videoElement = document.createElement('div')
+    videoElement.classList.add('responsiveIframe')
 
-    const videoDescription = document.createElement('p')
-    const videoTitle = document.createElement('h5')
+    const videoTitle = document.createElement('h4')
     const videoCreator = document.createElement('h6')
-    const viewsCount = document.createElement('span')
     const likesCount = document.createElement('span')
+    const viewsCount = document.createElement('span')
     const commentsCount = document.createElement('span')
     const uploadDate = document.createElement('span')
+    const videoDescription = document.createElement('p')
     const videoTags = document.createElement('span')
 
     videoElement.innerHTML = videoUrl
 
-    videoTitle.textContent = `Title: ${title}`
-    videoCreator.textContent = `Creator: ${creator}`
-    videoDescription.textContent = `Description: ${videoDesc}`
-
-    viewsCount.textContent = `View Count: ${views}`
-    likesCount.textContent = `Like Count: ${likes}`
-    commentsCount.textContent = `Comment Count: ${comments}`
-    uploadDate.textContent = `Upload: ${date}`
-    videoTags.textContent = `Tags: ${tags}`
+    videoTitle.innerHTML = `${title}`
+    videoCreator.innerHTML = `${creator}`
+    likesCount.innerHTML = `<i class="fa-solid fa-heart"></i> ${likes} <br>`
+    viewsCount.innerHTML = `<i class="fa-solid fa-eye"></i> ${views} <br>`
+    commentsCount.innerHTML = `<i class="fa-solid fa-comment"></i> ${comments} <br>`
+    uploadDate.innerHTML = `<i class="fa-solid fa-upload"></i> ${date}`
+    videoDescription.innerHTML = `${videoDesc}`
+    
+    
+    if (tags === undefined) {
+        videoTags.innerHTML = ''
+    } else {
+        videoTags.innerHTML = `<i class="fa-solid fa-hashtag"></i> ${tags}`        
+    }
 
     videoDivFullInfo.appendChild(row)
 
@@ -165,12 +182,12 @@ function createVideoFullInfoDiv(videoUrl, title, videoDesc, creator, views, like
     columnOne.appendChild(videoElement)
 
     columnTwo.appendChild(videoTitle)
-    columnTwo.appendChild(videoDescription)
     columnTwo.appendChild(videoCreator)
-    columnTwo.appendChild(viewsCount)
     columnTwo.appendChild(likesCount)
+    columnTwo.appendChild(viewsCount)
     columnTwo.appendChild(commentsCount)
     columnTwo.appendChild(uploadDate)
+    columnTwo.appendChild(videoDescription)
     columnTwo.appendChild(videoTags)
 }
 
